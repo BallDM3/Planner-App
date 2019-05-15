@@ -15,6 +15,7 @@
 		34C68602228C93A100E6F6D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34C68600228C93A000E6F6D7 /* LaunchScreen.storyboard */; };
 		34C6860D228C93A100E6F6D7 /* Planner_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C6860C228C93A100E6F6D7 /* Planner_AppTests.swift */; };
 		34C68618228C93A100E6F6D7 /* Planner_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C68617228C93A100E6F6D7 /* Planner_AppUITests.swift */; };
+		E0F685A8228C9B9900FA75B7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F685A7228C9B9900FA75B7 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		34C68613228C93A100E6F6D7 /* Planner AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Planner AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34C68617228C93A100E6F6D7 /* Planner_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planner_AppUITests.swift; sourceTree = "<group>"; };
 		34C68619228C93A100E6F6D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0F685A7228C9B9900FA75B7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				34C685F7228C939D00E6F6D7 /* FirstViewController.swift */,
 				34C685F9228C939D00E6F6D7 /* SecondViewController.swift */,
 				34C685FB228C939D00E6F6D7 /* Main.storyboard */,
+				E0F685A7228C9B9900FA75B7 /* Launch Screen.storyboard */,
 				34C685FE228C93A000E6F6D7 /* Assets.xcassets */,
 				34C68600228C93A000E6F6D7 /* LaunchScreen.storyboard */,
 				34C68603228C93A100E6F6D7 /* Info.plist */,
@@ -234,6 +237,7 @@
 			files = (
 				34C68602228C93A100E6F6D7 /* LaunchScreen.storyboard in Resources */,
 				34C685FF228C93A000E6F6D7 /* Assets.xcassets in Resources */,
+				E0F685A8228C9B9900FA75B7 /* Launch Screen.storyboard in Resources */,
 				34C685FD228C939D00E6F6D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
