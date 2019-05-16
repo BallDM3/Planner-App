@@ -7,24 +7,29 @@
 //
 
 import UIKit
+class FourthViewController: UIViewController, UITextFieldDelegate
+{
+    
+    //MARK: Properties
 
-class FourthViewController: UIViewController {
-
+    @IBOutlet weak var desGoalName: UITextField!
+    @IBOutlet weak var insGoalName: UITextField!
+    @IBOutlet weak var insDate: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // MARK: -Action
+   
     }
-    */
-
+    @IBAction func createGoal(_ sender: UIButton)
+    {
+        if (desGoalName.text != " "), (insGoalName.text != "")
+        {
+            list.append(desGoalName.text!)
+            list.append(insGoalName.text ?? <#default value#>)
+            desGoalName.text = " "
+            insGoalName.text = " "
+        }
+    }
 }

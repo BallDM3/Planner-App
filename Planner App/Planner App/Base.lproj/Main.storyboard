@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WME-7y-ojJ">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,12 +10,12 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Daily Planner-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController title="Daily Planner" wantsFullScreenLayout="YES" extendedLayoutIncludesOpaqueBars="YES" hidesBottomBarWhenPushed="YES" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <keyCommands>
-                        <keyCommand input="3" modifierFlags="131072" actionName="jklim"/>
+                        <keyCommand input="3" modifierFlags="131072" actionName="create"/>
                     </keyCommands>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -37,7 +37,7 @@
         <!--Second-->
         <scene sceneID="Oei-gb-HDy">
             <objects>
-                <viewController id="WME-7y-ojJ" userLabel="Second" customClass="SecondViewController" customModule="Planner_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" extendedLayoutIncludesOpaqueBars="YES" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" hidesBottomBarWhenPushed="YES" id="WME-7y-ojJ" userLabel="Second" customClass="SecondViewController" customModule="Planner_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yur-JB-RPW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,6 +45,7 @@
                         <viewLayoutGuide key="safeArea" id="sZN-zT-PTF"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="k6l-nL-p26"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="414" height="896"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPM-7r-fzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,6 +101,9 @@
                                             <color key="titleColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" red="1" green="0.01720881757" blue="0.082796581889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="createTask:" destination="JO8-8d-HAp" eventType="touchUpInside" id="c3U-rq-6AH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -113,7 +117,14 @@
                         </accessibility>
                         <viewLayoutGuide key="safeArea" id="rBd-eS-cvf"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="ITY-hf-XEa"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Item" id="ITY-hf-XEa"/>
+                    <connections>
+                        <outlet property="addTask" destination="hNU-3B-MNq" id="7es-V0-Pzi"/>
+                        <outlet property="addTasklabel" destination="SGa-ny-nXU" id="b78-cG-6ly"/>
+                        <outlet property="input" destination="KlD-rE-8oR" id="UHN-Bg-3P7"/>
+                        <outlet property="pickDate" destination="hNU-3B-MNq" id="1yo-el-RHO"/>
+                        <outlet property="taskName" destination="QDl-yy-IIm" id="no6-XK-AS1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUp-Io-pDH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,32 +149,90 @@
         <!--Long Term Goal-->
         <scene sceneID="FCm-YX-7pz">
             <objects>
-                <viewController id="AAf-XU-onM" sceneMemberID="viewController">
+                <viewController id="AAf-XU-onM" customClass="FourthViewController" customModule="Planner_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yoc-L6-WsR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iae-fO-JbZ">
-                                <rect key="frame" x="173" y="95" width="69" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name Your Long Term Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7t-Np-DjE">
-                                <rect key="frame" x="67" y="158" width="269" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.98135286569595337" green="0.12240303307771683" blue="0.019977599382400513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="eIp-q7-zTC">
+                                <rect key="frame" x="0.0" y="90" width="414" height="662"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Long Term Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iae-fO-JbZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="252.5" height="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Name Your Long Term Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7t-Np-DjE">
+                                        <rect key="frame" x="0.0" y="69" width="240" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.98135286569595337" green="0.12240303307771683" blue="0.019977599382400513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="                                                " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49d-wN-hNn">
+                                        <rect key="frame" x="0.0" y="127" width="204" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="insGoalName:" destination="Vhy-CT-wXb" eventType="editingDidEnd" id="MCx-Qd-N77"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Describe Your Long Term Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVM-HF-26Q">
+                                        <rect key="frame" x="0.0" y="191" width="262" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.98135286569595337" green="0.12240303307771683" blue="0.019977599382400513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="                                                                              " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="biM-y2-Gwa">
+                                        <rect key="frame" x="0.0" y="249" width="318" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When Is Your Goal Due?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAE-fc-kwN">
+                                        <rect key="frame" x="0.0" y="313" width="209" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.98135286569595337" green="0.12240303307771683" blue="0.019977599382400513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="PfH-Sp-Eu5">
+                                        <rect key="frame" x="0.0" y="371" width="320" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="579739032.00420594">
+                                            <!--2019-05-16 22:37:12 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0su-gT-C2k">
+                                        <rect key="frame" x="0.0" y="621" width="170" height="41"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="     Create Goal    ">
+                                            <color key="titleColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createGoal:" destination="Vhy-CT-wXb" eventType="touchUpInside" id="Kq2-6w-eui"/>
+                                            <action selector="createGoal:" destination="AAf-XU-onM" eventType="touchUpInside" id="iQk-0j-NPY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oY6-H1-9fC" firstAttribute="trailing" secondItem="eIp-q7-zTC" secondAttribute="trailing" id="0Z3-IO-PMe"/>
+                            <constraint firstItem="eIp-q7-zTC" firstAttribute="leading" secondItem="oY6-H1-9fC" secondAttribute="leading" id="aLk-gU-1uI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="oY6-H1-9fC"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Long Term Goal" id="sMu-qY-Qvo"/>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="Long Term Goal" id="sMu-qY-Qvo"/>
+                    <connections>
+                        <outlet property="desGoalName" destination="biM-y2-Gwa" id="zdW-oF-9Nd"/>
+                        <outlet property="insDate" destination="PfH-Sp-Eu5" id="jUM-bR-F6l"/>
+                        <outlet property="insGoalName" destination="49d-wN-hNn" id="DoB-6l-fE0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfh-MS-WMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vhy-CT-wXb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1776.8115942028987" y="-367.63392857142856"/>
         </scene>
