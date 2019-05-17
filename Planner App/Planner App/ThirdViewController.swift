@@ -7,16 +7,32 @@
 //
 
 import UIKit
+var list = [""]
+class ThirdViewController: UIViewController, UITextFieldDelegate {
+    
+    //Mark: Properties
 
-class ThirdViewController: UIViewController {
-
-    override func viewDidLoad() {
+    @IBOutlet weak var addTasklabel: UILabel!
+    @IBOutlet weak var whatName: UILabel!
+    @IBOutlet weak var input: UITextField!
+    @IBOutlet weak var whnDue: UILabel!
+    @IBOutlet weak var pickDate: UIDatePicker!
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Handle the text field's user input through delegate callbacks
+        input.delegate = self
+        //Mark: UITextFieldDelegate
+        //Mark: Actions
+    }
+    @IBAction func createTask(_ sender: UIButton) {
+        if (input.text != "")
+        {
+            list.append(input.text!)
+            input.text = " "
+        }
     }
     
-
     /*
     // MARK: - Navigation
 
