@@ -13,12 +13,15 @@ class ThirdViewController: UIViewController, UITextFieldDelegate {
     //Mark: Properties
 
     @IBOutlet weak var addTasklabel: UILabel!
+    @IBOutlet weak var whatName: UILabel!
     @IBOutlet weak var input: UITextField!
+    @IBOutlet weak var whnDue: UILabel!
     @IBOutlet weak var pickDate: UIDatePicker!
     override func viewDidLoad()
     {
         super.viewDidLoad()
-       
+        // Handle the text field's user input through delegate callbacks
+        input.delegate = self
         //Mark: UITextFieldDelegate
         //Mark: Actions
     }

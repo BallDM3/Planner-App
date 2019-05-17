@@ -17,6 +17,9 @@ class FourthViewController: UIViewController, UITextFieldDelegate
     @IBOutlet weak var insDate: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Handle the text field's user input through delegate callbacks.
+        insGoalName.delegate = self
+        desGoalName.delegate = self 
 
     
         // MARK: -Action
