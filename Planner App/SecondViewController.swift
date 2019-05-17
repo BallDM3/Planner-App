@@ -1,5 +1,5 @@
 //
-//  ThirdViewController.swift
+//  SecondViewController.swift
 //  Planner App
 //
 //  Created by user916724 on 5/15/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
